@@ -1,40 +1,24 @@
-import { TypeOrmModuleOptions } from "@nestjs/typeorm";
-import { User } from "./../users/user.entity";
-import { PostEntity } from "./../posts/post.entity";
-import { Category } from "./../categories/category.entity";
-import { GuideService } from "./../guide-services/guide-service.entity";
-import { ImageEntity } from "./../images/image.entity";
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
-// export const dbconfig: TypeOrmModuleOptions = {
-//     type: "postgres",
-//     host: "localhost",
-//     port: 5432,
-//     username: "postgres",
-//     password: "postgres",
-//     database: "guia",
-//     entities: [
-//         User, 
-//         PostEntity,
-//         Category,
-//         GuideService,
-//         ImageEntity
-//     ],
-//     synchronize: true
-// }
+import { User } from './../users/user.entity';
+import { PostEntity } from './../posts/post.entity';
+import { Category } from './../categories/category.entity';
+import { GuideService } from './../guide-services/guide-service.entity';
+import { ImageEntity } from './../images/image.entity';
 
 export const dbconfig: TypeOrmModuleOptions = {
-    type: "mysql",
-    host: "mysql669.umbler.com",
-    port: 41890,
-    username: "mbarata",
-    password: "tdostdompgsc",
-    database: "guiasertao",
+    type: 'mysql',
+    host: 'localhost',
+    port: 3306,
+    username: 'root',
+    password: '',
+    database: 'guiasertao',
     entities: [
-        User, 
+        User,
         PostEntity,
         Category,
         GuideService,
-        ImageEntity
+        ImageEntity,
     ],
-    synchronize: true
-}
+    synchronize: true,
+};

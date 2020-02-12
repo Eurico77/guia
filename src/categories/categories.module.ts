@@ -8,10 +8,10 @@ import { CategoriesService } from './categories.service';
 @Module({
     imports: [
         TypeOrmModule.forFeature([Category]),
-        forwardRef(() =>PostsModule)
+        forwardRef(() => PostsModule),
     ],
     controllers: [CategoriesController],
     providers: [CategoriesService],
-    exports: [CategoriesService]
+    exports: [CategoriesService],
 })
 export class CategoriesModule {}

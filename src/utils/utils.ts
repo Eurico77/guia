@@ -1,14 +1,14 @@
-export const pathUrl = 'http://guiasertao.com.br';
+export const pathUrl = 'localhost:3000';
 
-export const fs = import("fs");
+export const fs = import('fs');
 
 export function decodeBase64Image(dataString: string) {
-    var response: any = {
+    const response: any = {
         type: null,
-        data: null
-    }
+        data: null,
+    };
 
-    var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+    const matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
 
     if (matches.length !== 3) {
         return new Error('Invalid input string');

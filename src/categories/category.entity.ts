@@ -1,11 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from "typeorm";
-import { PostEntity } from "./../posts/post.entity";
-import { GuideService } from "./../guide-services/guide-service.entity";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
+import { PostEntity } from './../posts/post.entity';
+import { GuideService } from './../guide-services/guide-service.entity';
 
 @Entity()
 export class Category {
 
-    @PrimaryGeneratedColumn({name: "category_id"})
+    @PrimaryGeneratedColumn({name: 'category_id'})
     id: number;
 
     @Column()

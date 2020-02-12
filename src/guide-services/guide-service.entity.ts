@@ -1,18 +1,18 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinTable, OneToMany } from "typeorm";
-import { User } from "../users/user.entity";
-import { Category } from "../categories/category.entity";
-import { ImageEntity } from "./../images/image.entity";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinTable, OneToMany } from 'typeorm';
+import { User } from '../users/user.entity';
+import { Category } from '../categories/category.entity';
+import { ImageEntity } from './../images/image.entity';
 
-@Entity({name: "service"})
+@Entity({name: 'service'})
 export class GuideService {
 
-    @PrimaryGeneratedColumn({name: "service_id"})
+    @PrimaryGeneratedColumn({name: 'service_id'})
     id: number;
 
     @Column()
     title: string;
 
-    @Column("text")
+    @Column('text')
     description: string;
 
     @Column({nullable: true})
@@ -31,7 +31,7 @@ export class GuideService {
     @JoinTable()
     categories: Category[];
 
-    @OneToMany(type => ImageEntity, image => image.guideService, {eager: true})
+    @OneToMany(type => ImageEntity, image => image.guideService, {eager: false})
     images: ImageEntity[];
 
     @Column()
@@ -39,5 +39,5 @@ export class GuideService {
 
     @Column()
     updatedAt: Date;
-    
+
 }
